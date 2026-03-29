@@ -545,7 +545,7 @@ const optionData = {
   pets: [
     {
       id: "none",
-      name: "Sem kitty",
+      name: "Sem mascote",
       description: "Sua doll fica sem companhia por enquanto.",
       thumb: EMPTY_THUMB,
       palette: ["#ffffff", "#ffe0ee"],
@@ -646,7 +646,7 @@ const optionData = {
     {
       id: "lilac",
       name: "Lilac",
-      description: "LilÃ¡s docinho.",
+      description: "Lilas docinho.",
       hex: "#b39bd5",
       palette: ["#b39bd5", "#ebe3ff", "#fff8fb"],
     },
@@ -1793,7 +1793,7 @@ async function buildExportCanvas() {
 
   ctx.fillStyle = "#d45d93";
   ctx.font = "900 26px Nunito, sans-serif";
-  ctx.fillText("KITTY CUTE FINAL", 168, 1356);
+  ctx.fillText("POSTER FINAL", 168, 1356);
 
   ctx.fillStyle = "#693d57";
   setFittedTitleFont(ctx, GAME_TITLE, 760);
@@ -1801,14 +1801,14 @@ async function buildExportCanvas() {
 
   ctx.fillStyle = "#8b647a";
   ctx.font = "600 32px Nunito, sans-serif";
-  ctx.fillText(currentLookLine().replace("Ã‚Â·", "Â·"), 160, 1496);
+  ctx.fillText(currentLookLine(), 160, 1496);
   ctx.fillText(
-    pet.pet.id === "none" ? "Nenhuma kitty escolhida nessa rodada." : `Kitty: ${pet.pet.name} em ${pet.petColor.name}.`,
+    pet.pet.id === "none" ? "Nenhuma companhia escolhida nessa rodada." : `Mascote: ${pet.pet.name} em ${pet.petColor.name}.`,
     160,
     1542
   );
   ctx.fillText(
-    `Rosto: ${getSelectedName("eyes")} Â· ${getDisplayColorLabel("eyeColors")} Â· ${getSelectedName("makeup")}`,
+    `Rosto: ${getSelectedName("eyes")} / ${getDisplayColorLabel("eyeColors")} / ${getSelectedName("makeup")}`,
     160,
     1588
   );
@@ -1819,10 +1819,10 @@ async function buildExportCanvas() {
   ctx.drawImage(kitty, 996, 1398, 96, 96);
   ctx.fillStyle = "#cf5b91";
   ctx.font = "800 28px Nunito, sans-serif";
-  ctx.fillText("Doll & kitty", 954, 1518);
+  ctx.fillText("doll & friend", 954, 1518);
   ctx.fillStyle = "#8b647a";
   ctx.font = "600 22px Nunito, sans-serif";
-  ctx.fillText("closet cute export", 986, 1554);
+  ctx.fillText("colecao digital", 986, 1554);
 
   return canvas;
 }
@@ -1870,7 +1870,7 @@ async function shareLook() {
     if (navigator.canShare?.({ files: [file] })) {
       await navigator.share({
         title: GAME_TITLE,
-        text: `Meu look cute em ${GAME_TITLE}`,
+        text: `Meu look em ${GAME_TITLE}`,
         files: [file],
       });
       setFinalFeedback("Compartilhamento pronto.");
@@ -1900,16 +1900,16 @@ function renderFinalActions() {
       <div class="final-action-head">
         <img src="./assets/decor/kitty-mascot.svg" alt="" />
         <div>
-          <p class="eyebrow small">Cute Share</p>
+          <p class="eyebrow small">Compartilhar</p>
           <strong>Salve ou compartilhe o resultado final</strong>
-          <p>${pet.pet.id === "none" ? "Seu look ja esta pronto para salvar." : `A kitty escolhida foi ${pet.pet.name} em ${pet.petColor.name}.`}</p>
+          <p>${pet.pet.id === "none" ? "Seu look ja esta pronto para salvar." : `A companhia escolhida foi ${pet.pet.name} em ${pet.petColor.name}.`}</p>
         </div>
       </div>
       <div class="final-buttons">
         <button type="button" class="secondary-button" data-final-action="save">Salvar em PNG</button>
         <button type="button" class="secondary-button primary-share" data-final-action="share">Compartilhar look</button>
       </div>
-      <p class="final-feedback">A exportacao monta um poster cute do look completo.</p>
+      <p class="final-feedback">O poster final sera exportado em PNG.</p>
     </section>
   `;
 }
@@ -1927,7 +1927,7 @@ function currentLookLine() {
     return "Sua doll esta sem roupa no momento.";
   }
 
-  return `Blusa: ${getSelectedName("tops")} Â· Bottom: ${getSelectedName("bottoms")}`;
+  return `Blusa: ${getSelectedName("tops")} / Bottom: ${getSelectedName("bottoms")}`;
 }
 
 function selectedLookLayers() {
@@ -1985,13 +1985,13 @@ function renderFinalCards() {
     buildFinalCard("Look final", currentLookLine(), renderStack(selectedLookLayers()), clothing.palette),
     buildFinalCard(
       "Rosto",
-      `${face.eyebrows.name} Â· ${face.eyes.name} Â· ${face.mouths.name}`,
+      `${face.eyebrows.name} / ${face.eyes.name} / ${face.mouths.name}`,
       renderStack([previewBodyLayer(face), ...faceLayers(face), makeLayer(face.hair.asset, "", "center bottom", "", "hair", face.hairColorHex)]),
       ["#ffdce8", "#f7f7fb", "#d1f3ec"]
     ),
     buildFinalCard(
       "Cores",
-      `Pele ${face.skinTones.name} Â· Olho ${getDisplayColorLabel("eyeColors")} Â· Cabelo ${getDisplayColorLabel("hairColors")}`,
+      `Pele ${face.skinTones.name} / Olho ${getDisplayColorLabel("eyeColors")} / Cabelo ${getDisplayColorLabel("hairColors")}`,
       renderStack([previewBodyLayer(face), ...faceLayers(face), makeLayer(face.hair.asset, "", "center bottom", "", "hair", face.hairColorHex)]),
       ["#ffe4ef", "#fff5de", "#ead7ff"]
     ),
@@ -2002,8 +2002,8 @@ function renderFinalCards() {
       shoes.palette
     ),
     buildFinalCard(
-      "Kittys",
-      pet.pet.id === "none" ? "Nenhuma kitty escolhida ainda." : `${pet.pet.name} Â· ${pet.petColor.name}`,
+      "Mascote",
+      pet.pet.id === "none" ? "Nenhuma companhia escolhida ainda." : `${pet.pet.name} / ${pet.petColor.name}`,
       pet.pet.id === "none"
         ? renderStack([], EMPTY_THUMB)
         : renderStack([makeLayer(pet.pet.asset, "", "center center", "scale(0.82)")]),
@@ -2033,12 +2033,12 @@ function renderStatusCard() {
     <span class="status-row"><strong>${GAME_TITLE}</strong></span>
     <span class="status-row">${currentLookLine()}</span>
     <span class="status-row">Pele: <strong>${getSelectedName("skinTones")}</strong></span>
-    <span class="status-row">Olhos: <strong>${getSelectedName("eyes")} Â· ${getDisplayColorLabel("eyeColors")}</strong></span>
-    <span class="status-row">Sobrancelha: <strong>${getSelectedName("eyebrows")} Â· ${getDisplayColorLabel("eyebrowColors")}</strong></span>
-    <span class="status-row">Cilios: <strong>${getSelectedName("lashes")} Â· ${getDisplayColorLabel("lashColors")}</strong></span>
-    <span class="status-row">Cabelo: <strong>${getSelectedName("hair")} Â· ${getDisplayColorLabel("hairColors")}</strong></span>
+    <span class="status-row">Olhos: <strong>${getSelectedName("eyes")} / ${getDisplayColorLabel("eyeColors")}</strong></span>
+    <span class="status-row">Sobrancelha: <strong>${getSelectedName("eyebrows")} / ${getDisplayColorLabel("eyebrowColors")}</strong></span>
+    <span class="status-row">Cilios: <strong>${getSelectedName("lashes")} / ${getDisplayColorLabel("lashColors")}</strong></span>
+    <span class="status-row">Cabelo: <strong>${getSelectedName("hair")} / ${getDisplayColorLabel("hairColors")}</strong></span>
     <span class="status-row">Make: <strong>${getSelectedName("makeup")}</strong></span>
-    <span class="status-row">Kittys: <strong>${pet.pet.id === "none" ? "Sem kitty" : `${pet.pet.name} Â· ${pet.petColor.name}`}</strong></span>
+    <span class="status-row">Mascote: <strong>${pet.pet.id === "none" ? "Sem mascote" : `${pet.pet.name} / ${pet.petColor.name}`}</strong></span>
   `;
 }
 
@@ -2347,4 +2347,5 @@ window.advanceTime = async (ms = 16) => {
 if (!applyDebugStateFromQuery()) {
   renderScene();
 }
+
 
