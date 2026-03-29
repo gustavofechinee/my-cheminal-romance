@@ -1,4 +1,6 @@
 output/
+output-*.png
+output-*.json
 progress.md
 tmp*/
 tmp*.zip

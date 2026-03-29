@@ -34,9 +34,9 @@ const steps = [
   },
   {
     id: "pet",
-    label: "3. Kittys",
+    label: "3. Mascotes",
     kicker: "Etapa 3",
-    title: "Escolha uma kitty para acompanhar a sua doll",
+    title: "Escolha um mascote para acompanhar a sua doll",
     categories: ["pets", "petColors"],
   },
   {
@@ -60,7 +60,7 @@ const categories = {
   makeup: { label: "Maquiagem" },
   hair: { label: "Cabelos" },
   hairColors: { label: "Cor do cabelo" },
-  pets: { label: "Kittys" },
+  pets: { label: "Mascotes" },
   petColors: { label: "Aura" },
   tops: { label: "Blusas" },
   bottoms: { label: "Saias e bottoms" },
@@ -552,101 +552,101 @@ const optionData = {
     },
     {
       id: "kitty-cat",
-      name: "Kitty cat",
-      description: "Gatinha 3D bem fofinha.",
-      asset: "./assets/pets/fluent/cat.png",
+      name: "Gatinha laço",
+      description: "Gatinha com laço e carinha delicada.",
+      asset: "./assets/pets/kitty-cat.svg",
       palette: ["#d6d8de", "#ffc8dc", "#fff6fb"],
     },
     {
       id: "puppy-bow",
-      name: "Puppy bow",
-      description: "Cachorrinho cute com carinha doce.",
-      asset: "./assets/pets/fluent/dog.png",
+      name: "Cachorrinho laço",
+      description: "Cachorrinho redondo com laço rosado.",
+      asset: "./assets/pets/puppy-bow.svg",
       palette: ["#d7dade", "#ffd2df", "#fff8fb"],
     },
     {
       id: "bunny-milk",
-      name: "Bunny milk",
-      description: "Coelhinho meigo e bem delicado.",
-      asset: "./assets/pets/fluent/rabbit.png",
+      name: "Coelhinho doce",
+      description: "Coelhinho clarinho com jeitinho calmo.",
+      asset: "./assets/pets/bunny-milk.svg",
       palette: ["#d9dbe1", "#f7d5df", "#fff8fb"],
     },
     {
       id: "froggy-bow",
-      name: "Froggy bow",
-      description: "Sapinho redondo super cute.",
-      asset: "./assets/pets/fluent/frog.png",
+      name: "Sapinho laço",
+      description: "Sapinho redondo com detalhe rosado.",
+      asset: "./assets/pets/froggy-bow.svg",
       palette: ["#d5d8dd", "#ffc5d9", "#fff8fb"],
     },
     {
       id: "hamster-mochi",
       name: "Hamster mochi",
-      description: "Hamster mochi fofinho.",
-      asset: "./assets/pets/fluent/hamster.png",
+      description: "Hamster fofinho com bochechas rosadas.",
+      asset: "./assets/pets/hamster-mochi.svg",
       palette: ["#d6d8de", "#f5b9c8", "#fff8fb"],
     },
     {
       id: "duckling",
-      name: "Baby chick",
-      description: "Pintinho pequeno e alegre.",
-      asset: "./assets/pets/fluent/chick.png",
+      name: "Patinho",
+      description: "Pintinho pequeno para cenas mais leves.",
+      asset: "./assets/pets/duckling.svg",
       palette: ["#d7dade", "#f3bf77", "#fff8fb"],
     },
     {
       id: "panda-baby",
-      name: "Panda baby",
-      description: "Panda mini super cute.",
-      asset: "./assets/pets/fluent/panda.png",
+      name: "Panda bebê",
+      description: "Panda mini com contraste bem bonitinho.",
+      asset: "./assets/pets/panda-baby.svg",
       palette: ["#e8e8ec", "#8b8a90", "#fff8fb"],
     },
   ],
   petColors: [
     {
       id: "cloud-cream",
-      name: "Cloud cream",
+      name: "Creme nuvem",
       description: "Clarinho e macio.",
       hex: "#efe6d4",
       palette: ["#efe6d4", "#fff7ea", "#f7d8e1"],
     },
     {
       id: "honey",
-      name: "Honey",
+      name: "Mel",
       description: "Quentinho e dourado.",
       hex: "#d2ab61",
       palette: ["#d2ab61", "#f5ddb6", "#fff5e8"],
     },
     {
       id: "strawberry",
-      name: "Strawberry",
+      name: "Morango",
       description: "Rosadinho cute.",
       hex: "#d899a8",
       palette: ["#d899a8", "#f7d7e1", "#fff7fb"],
     },
     {
       id: "mint",
-      name: "Mint",
+      name: "Menta",
       description: "Verde pastel fofo.",
       hex: "#8db9a0",
       palette: ["#8db9a0", "#d7efe2", "#fff8fb"],
     },
     {
       id: "sky",
-      name: "Sky",
+      name: "Céu",
       description: "Azul bem suave.",
       hex: "#90afcd",
       palette: ["#90afcd", "#dce9f7", "#fff8fb"],
     },
     {
       id: "cocoa",
-      name: "Cocoa",
+      name: "Cacau",
       description: "Marrom aconchegante.",
       hex: "#8c6555",
       palette: ["#8c6555", "#e0b9a8", "#fff1ea"],
     },
     {
       id: "lilac",
-      name: "Lilac",
-      description: "Lilas docinho.",
+      name: "Lilás",
+      description: "Lilás docinho.",
       hex: "#b39bd5",
       palette: ["#b39bd5", "#ebe3ff", "#fff8fb"],
     },
@@ -1743,12 +1743,12 @@ async function buildExportCanvas() {
   const sparkle = await loadAssetImage("./assets/decor/sparkles.svg");
   const heartRibbon = await loadAssetImage("./assets/decor/heart-ribbon.svg");
   const blossom = await loadAssetImage("./assets/decor/cherry-blossom.svg");
-  const kitty = await loadAssetImage("./assets/decor/kitty-mascot.svg");
+  const mascotBadge = await loadAssetImage("./assets/decor/cat-face.svg");
 
   ctx.drawImage(sparkle, 132, 238, 120, 120);
   ctx.drawImage(heartRibbon, 1096, 192, 112, 112);
   ctx.drawImage(blossom, 130, 920, 120, 120);
-  ctx.drawImage(kitty, 1096, 88, 144, 144);
+  ctx.drawImage(mascotBadge, 1096, 88, 144, 144);
 
   const dollLayers = selectedLookLayers();
   const dollX = 338;
@@ -1816,7 +1816,7 @@ async function buildExportCanvas() {
   roundRectPath(ctx, 940, 1380, 264, 176, 34);
   ctx.fillStyle = "#fff2f8";
   ctx.fill();
-  ctx.drawImage(kitty, 996, 1398, 96, 96);
+  ctx.drawImage(mascotBadge, 996, 1398, 96, 96);
   ctx.fillStyle = "#cf5b91";
   ctx.font = "800 28px Nunito, sans-serif";
   ctx.fillText("doll & friend", 954, 1518);
@@ -1898,7 +1898,7 @@ function renderFinalActions() {
   finalActions.innerHTML = `
     <section class="final-action-card">
       <div class="final-action-head">
-        <img src="./assets/decor/kitty-mascot.svg" alt="" />
+        <img src="./assets/decor/cat-face.svg" alt="" />
         <div>
           <p class="eyebrow small">Compartilhar</p>
           <strong>Salve ou compartilhe o resultado final</strong>
