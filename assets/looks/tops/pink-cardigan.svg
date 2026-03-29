@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1400" fill="none">
+  <defs>
+    <linearGradient id="cardigan" x1="450" y1="496" x2="450" y2="860" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFB2D0"/>
+      <stop offset="1" stop-color="#FF86B4"/>
+    </linearGradient>
+  </defs>
+  <path d="M324 518C362 486 538 486 576 518L603 734C608 764 586 792 556 792H344C314 792 292 764 297 734L324 518Z" fill="url(#cardigan)"/>
+  <path d="M365 520H535L520 860H380L365 520Z" fill="#FFF6FA"/>
+  <circle cx="450" cy="602" r="15" fill="#FFD772"/>
+  <path d="M450 676C464 652 490 658 495 678C500 701 474 717 450 738C426 717 400 701 405 678C410 658 436 652 450 676Z" fill="#FF7BA8"/>
+  <circle cx="450" cy="764" r="15" fill="#FFD772"/>
+  <path d="M300 570C271 602 260 654 270 696C275 719 297 732 320 727L335 680L300 570Z" fill="#FFA4C7"/>
+  <path d="M600 570C629 602 640 654 630 696C625 719 603 732 580 727L565 680L600 570Z" fill="#FFA4C7"/>
+</svg>

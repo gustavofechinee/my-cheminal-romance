@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1400" fill="none">
+  <defs>
+    <linearGradient id="hair" x1="450" y1="120" x2="450" y2="1140" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFEAA0"/>
+      <stop offset=".44" stop-color="#F2B15B"/>
+      <stop offset="1" stop-color="#D9873A"/>
+    </linearGradient>
+    <linearGradient id="shine" x1="372" y1="160" x2="538" y2="1020" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF5CE" stop-opacity=".9"/>
+      <stop offset="1" stop-color="#FFF5CE" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <path d="M286 236C294 160 358 112 450 112C542 112 606 160 614 236C622 320 602 404 568 496C544 560 536 636 550 742C569 894 547 1029 492 1142C471 1184 429 1184 408 1142C353 1029 331 894 350 742C364 636 356 560 332 496C298 404 278 320 286 236Z" fill="url(#hair)"/>
+  <path d="M302 404C250 520 244 662 282 804C304 888 292 982 244 1088" stroke="#D98A3E" stroke-linecap="round" stroke-width="28"/>
+  <path d="M598 404C650 520 656 662 618 804C596 888 608 982 656 1088" stroke="#D98A3E" stroke-linecap="round" stroke-width="28"/>
+  <path d="M326 178C368 148 532 148 574 178C606 202 620 242 612 292C602 362 572 420 536 470C496 526 404 526 364 470C328 420 298 362 288 292C280 242 294 202 326 178Z" fill="url(#shine)" opacity=".72"/>
+</svg>

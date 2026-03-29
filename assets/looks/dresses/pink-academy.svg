@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1400" fill="none">
+  <defs>
+    <linearGradient id="bodice" x1="450" y1="492" x2="450" y2="806" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFACCB"/>
+      <stop offset="1" stop-color="#FF89B5"/>
+    </linearGradient>
+  </defs>
+  <path d="M356 514C378 486 522 486 544 514L566 742C571 774 546 802 514 802H386C354 802 329 774 334 742L356 514Z" fill="url(#bodice)"/>
+  <path d="M392 522Q450 586 508 522" stroke="#FFF8FC" stroke-linecap="round" stroke-width="18"/>
+  <path d="M358 802C394 836 506 836 542 802L610 1028C622 1070 591 1110 548 1110H352C309 1110 278 1070 290 1028L358 802Z" fill="#FFDCE8"/>
+  <path d="M314 946C380 900 520 900 586 946" stroke="#FFF2AF" stroke-linecap="round" stroke-width="18"/>
+  <path d="M304 1018C382 970 518 970 596 1018" stroke="#FFF7FC" stroke-linecap="round" stroke-width="14"/>
+</svg>

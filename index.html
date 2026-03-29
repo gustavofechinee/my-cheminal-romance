@@ -1,0 +1,161 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My charminal romance</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Nunito:wght@500;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <section class="landing-screen" id="landing-screen">
+        <img class="landing-decor decor-bow-a" src="./assets/decor/ribbon.svg" alt="" />
+        <img class="landing-decor decor-bow-b" src="./assets/decor/ribbon.svg" alt="" />
+        <img class="landing-decor decor-bloom-a" src="./assets/decor/cherry-blossom.svg" alt="" />
+        <img class="landing-decor decor-bloom-b" src="./assets/decor/cherry-blossom.svg" alt="" />
+
+        <div class="landing-copy">
+          <div class="landing-kitty">
+            <img src="./assets/decor/kitty-mascot.svg" alt="" />
+            <span>Kitty glam entry</span>
+          </div>
+          <p class="eyebrow">Charminal Doll Closet</p>
+          <h1>My charminal romance</h1>
+          <p class="landing-text">
+            Monte uma doll delicada com cabelo loiro ondulado, make fofa, blusas, saias,
+            vestidos, kittys e final em poster cute para salvar.
+          </p>
+          <div class="landing-stats" aria-hidden="true">
+            <span>5 olhos</span>
+            <span>5 sobrancelhas</span>
+            <span>7 kittys</span>
+            <span>25+ roupas</span>
+            <span>make separada</span>
+          </div>
+          <button id="start-btn" class="primary-button" type="button">Entrar no closet</button>
+        </div>
+
+        <div class="landing-poster">
+          <div class="poster-frame">
+            <img class="scene-backdrop" src="./assets/stage/closet.svg" alt="" />
+            <div class="poster-sheen"></div>
+            <div class="doll-stack poster-doll" aria-hidden="true">
+              <img class="doll-layer" src="./assets/vendor/basics/basics_body1.png" alt="" />
+              <img class="doll-layer" src="./assets/looks/dresses/paper-black-glam.svg" alt="" />
+              <img class="doll-layer" src="./assets/vendor/basics/basics_topB_4.png" alt="" />
+              <img class="doll-layer" src="./assets/vendor/basics/basics_shoes3.png" alt="" />
+              <img class="doll-layer" src="./assets/vendor/basics/basics_eyebrow2.png" alt="" />
+              <img class="doll-layer" src="./assets/vendor/basics/basics_eyes1.png" alt="" />
+              <img class="doll-layer" src="./assets/vendor/basics/basics_eyelashes2.png" alt="" />
+              <img class="doll-layer" src="./assets/vendor/basics/basics_mouth2.png" alt="" />
+              <img class="doll-layer" src="./assets/vendor/basics/basics_hairA_5.png" alt="" />
+            </div>
+            <div class="pet-pedestal poster-pet-pedestal is-visible" style="--pet-accent:#f7d2df;"></div>
+            <img class="pet-layer" src="./assets/pets/fluent/cat.png" alt="" />
+            <img class="poster-float poster-float-a" src="./assets/decor/sparkles.svg" alt="" />
+            <img class="poster-float poster-float-b" src="./assets/decor/heart-ribbon.svg" alt="" />
+          </div>
+        </div>
+      </section>
+
+      <main class="studio-screen hidden" id="studio-screen">
+        <header class="studio-header">
+          <div>
+            <p class="eyebrow">Charminal Studio</p>
+            <h2>My charminal romance</h2>
+            <p class="header-copy">Closet deluxe com make, roupas, kittys fofinhas e final para compartilhar.</p>
+          </div>
+          <div class="header-actions">
+            <button id="shuffle-btn" class="secondary-button" type="button">Sortear look</button>
+            <button id="reset-btn" class="secondary-button ghost" type="button">Reiniciar</button>
+          </div>
+        </header>
+
+        <div class="studio-grid">
+          <section class="scene-panel">
+            <div class="scene-frame" id="scene-frame">
+              <img class="scene-backdrop" src="./assets/stage/closet.svg" alt="" />
+              <div class="scene-glow scene-glow-a"></div>
+              <div class="scene-glow scene-glow-b"></div>
+              <img class="scene-decor scene-decor-a" src="./assets/decor/cherry-blossom.svg" alt="" />
+              <img class="scene-decor scene-decor-b" src="./assets/decor/heart-ribbon.svg" alt="" />
+              <img class="scene-decor scene-decor-c" src="./assets/decor/sparkles.svg" alt="" />
+              <div class="doll-stack main-doll">
+                <img class="doll-layer" src="./assets/vendor/basics/basics_body1.png" alt="" />
+                <img class="doll-layer dynamic hidden" id="layer-eyebrows" alt="" />
+                <img class="doll-layer dynamic hidden" id="layer-eyes" alt="" />
+                <img class="doll-layer dynamic hidden" id="layer-lashes" alt="" />
+                <img class="doll-layer dynamic hidden" id="layer-mouth" alt="" />
+                <img class="doll-layer dynamic hidden" id="layer-makeup" alt="" />
+                <img class="doll-layer dynamic hidden" id="layer-bottom" alt="" />
+                <img class="doll-layer dynamic hidden" id="layer-top" alt="" />
+                <img class="doll-layer dynamic hidden" id="layer-dress" alt="" />
+                <img class="doll-layer dynamic hidden" id="layer-shoes" alt="" />
+                <img class="doll-layer dynamic hidden" id="layer-hair" alt="" />
+              </div>
+              <div class="pet-pedestal hidden" id="pet-pedestal"></div>
+              <img class="pet-layer dynamic hidden" id="layer-pet" alt="" />
+            </div>
+            <div class="status-card" id="status-card" aria-live="polite"></div>
+          </section>
+
+          <aside class="editor-panel">
+            <div class="editor-topline">
+              <p class="eyebrow small">Closet menu</p>
+              <p class="editor-copy">
+                Monte o rosto por partes: sobrancelha, olhos, cilios, boca, maquiagem e cabelo.
+                Depois combine as pecas, escolha uma kitty e feche tudo em um poster cute. Vestido
+                limpa a parte de cima e de baixo automaticamente.
+              </p>
+            </div>
+
+            <div class="stepper" id="stepper" aria-label="Etapas do jogo"></div>
+
+            <div class="panel-head">
+              <div>
+                <p class="eyebrow small" id="panel-kicker">Etapa 1</p>
+                <h3 id="panel-title">Escolha a maquiagem</h3>
+              </div>
+              <button id="next-step-btn" class="secondary-button small" type="button">
+                Proxima etapa
+              </button>
+            </div>
+
+            <div class="category-tabs" id="category-tabs" role="tablist" aria-label="Categorias"></div>
+            <div class="options-grid" id="options-grid" aria-live="polite"></div>
+            <div class="color-lab hidden" id="color-lab" aria-live="polite"></div>
+            <div class="final-actions hidden" id="final-actions" aria-live="polite"></div>
+
+            <p class="credits-note">
+              Character and clothing assets from
+              <a
+                href="https://maellemarylloup.itch.io/build-a-character-basics-free"
+                target="_blank"
+                rel="noreferrer"
+                >Build a character ~Basics (free)</a
+              >
+              and
+              <a
+                href="https://maellemarylloup.itch.io/chibi-character-basics-reworked"
+                target="_blank"
+                rel="noreferrer"
+                >Build a character [REWORKED]</a
+              >
+              by MaelleMarylloup. Decor icons by
+              <a href="https://openmoji.org" target="_blank" rel="noreferrer">OpenMoji</a>.
+            </p>
+          </aside>
+        </div>
+      </main>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
+

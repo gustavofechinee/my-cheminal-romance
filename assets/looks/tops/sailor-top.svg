@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1400" fill="none">
+  <defs>
+    <linearGradient id="fabric" x1="450" y1="470" x2="450" y2="860" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFCFE"/>
+      <stop offset="1" stop-color="#FFE7F1"/>
+    </linearGradient>
+  </defs>
+  <path d="M330 520C362 484 538 484 570 520L598 664C603 685 587 705 565 705H335C313 705 297 685 302 664L330 520Z" fill="url(#fabric)"/>
+  <path d="M342 520L450 626L558 520" fill="#AFC8FF"/>
+  <path d="M368 610C414 584 486 584 532 610L516 774C511 831 465 874 408 874H492C435 874 389 831 384 774L368 610Z" fill="#FFF2F8"/>
+  <circle cx="450" cy="632" r="28" fill="#FF8DBA"/>
+  <path d="M407 626C383 596 353 603 345 623C367 648 389 654 415 646L407 626Z" fill="#FFF"/>
+  <path d="M493 626C517 596 547 603 555 623C533 648 511 654 485 646L493 626Z" fill="#FFF"/>
+  <path d="M306 562C279 594 267 640 273 680C276 703 298 718 321 713L338 666L306 562Z" fill="#FFFAFD"/>
+  <path d="M594 562C621 594 633 640 627 680C624 703 602 718 579 713L562 666L594 562Z" fill="#FFFAFD"/>
+</svg>
