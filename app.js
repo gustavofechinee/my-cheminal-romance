@@ -363,6 +363,13 @@ const optionData = {
       palette: ["#da6c9a", "#ffd5e7", "#fff8fb"],
     },
     {
+      id: "fairy-blush",
+      name: "Fairy blush",
+      description: "Blush suave do pack Fairy Royal Couple.",
+      asset: "./assets/vendor/fairy-makeup/fairy-blush.png",
+      palette: ["#ef6a9a", "#ffdce9", "#fff8fb"],
+    },
+    {
       id: "gloss-heart",
       name: "Gloss heart",
       description: "Glow fofo com detalhe de coracao.",
@@ -426,6 +433,34 @@ const optionData = {
       description: "Curtinho baguncado.",
       asset: "./assets/vendor/basics/basics_hairEBW.png",
       palette: ["#d2d2d2", "#f2f2f2", "#fff8fb"],
+    },
+    {
+      id: "fairy-rose-bangs",
+      name: "Fairy rose",
+      description: "Franja lisa com laterais alongadas.",
+      asset: "./assets/vendor/fairy-hair/fairy-rose-bangs.png",
+      palette: ["#d7749a", "#ffd6e8", "#fff8fb"],
+    },
+    {
+      id: "fairy-rose-swept",
+      name: "Fairy airy",
+      description: "Franja mais leve com topo arredondado.",
+      asset: "./assets/vendor/fairy-hair/fairy-rose-swept.png",
+      palette: ["#d7749a", "#ffd6e8", "#fff8fb"],
+    },
+    {
+      id: "fairy-bun-soft",
+      name: "Fairy bun",
+      description: "Coque alto com franja delicada.",
+      asset: "./assets/vendor/fairy-hair/fairy-bun-soft.png",
+      palette: ["#d7749a", "#ffd6e8", "#fff8fb"],
+    },
+    {
+      id: "fairy-bun-swept",
+      name: "Fairy tousled",
+      description: "Curtinho fofo com coque lateral.",
+      asset: "./assets/vendor/fairy-hair/fairy-bun-swept.png",
+      palette: ["#c27a57", "#f7d8bf", "#fff8fb"],
     },
     {
       id: "wave-golden",
@@ -1472,12 +1507,12 @@ function getThumbLayers(categoryId, item) {
       return [makeLayer(face.hair.asset, "", "center center", "translateY(10%) scale(1.46)", "hair", hairHex)];
     }
     case "pets":
-      return [makeLayer(item.asset, "", "center center", "scale(0.84)")];
+      return [makeLayer(item.asset, "", "center center", "scale(0.92)")];
     case "petColors": {
       const pet = buildPet();
       const previewAsset =
         pet.pet.id === "none" ? getOption("pets", "kitty-cat").asset : pet.pet.asset;
-      return [makeLayer(previewAsset, "", "center center", "scale(0.84)")];
+      return [makeLayer(previewAsset, "", "center center", "scale(0.92)")];
     }
     case "tops":
       return [makeLayer(item.asset, "", "center center", "translateY(14%) scale(1.72)")];
